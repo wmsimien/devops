@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("/")
 public class MyController {
 
+    @RequestMapping
+    public String sayRoot() {
+        return "I am root!";
+    }
+
     @RequestMapping("api/health")
     public String sayHello() {
         return "API Health is good!";
@@ -14,6 +19,11 @@ public class MyController {
     @RequestMapping("api/ping")
     public String sayPing() {
         return "API ping!";
+    }
+
+    @RequestMapping("api/user")
+    public String sayUser() {
+        return "I am User!";
     }
 
 }
