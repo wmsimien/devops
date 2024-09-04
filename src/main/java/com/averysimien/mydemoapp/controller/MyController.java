@@ -26,4 +26,10 @@ public class MyController {
         return "I am User!";
     }
 
+    @RequestMapping("api/groot")
+    public String sayGroot() {
+        return "I am Groot!";
+    }
+
+
 }
