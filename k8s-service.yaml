@@ -1,0 +1,13 @@
+apiVersion: v1 # Kubernetes API version
+kind: Service # Kubernetes' resource kind we are creating
+metadata: # Metadata of the resource kind we are creating
+  name: demoapp-k8s-service
+spec:
+  selector:
+    app: demoapp-k8s # should be the same as deployment selector
+  ports:
+    - protocol: TCP
+      port: 8081       # Port that the service exposes (can be different from the container port)
+      targetPort: 8085 # Port the application listens on inside the container
+#      nodePort: 30008  # Port exposed on each node (between 30000 and 32767)
+  type: NodePort # Type of service
