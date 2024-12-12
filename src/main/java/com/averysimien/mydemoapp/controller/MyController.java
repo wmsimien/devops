@@ -31,5 +31,10 @@ public class MyController {
         return "I am Groot!";
     }
 
+    @RequestMapping("api/friend")
+    public String sayFriend() {
+        return "Hello Friend!";
+    }
+
 
 }
